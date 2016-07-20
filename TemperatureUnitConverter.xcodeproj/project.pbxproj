@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27C8F71AE758077E70951397 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA069A2B858A26F26D6A381 /* libPods.a */; };
 		611BCDAB1D3F0AF100C322B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BCDAA1D3F0AF100C322B2 /* main.m */; };
 		611BCDAE1D3F0AF100C322B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BCDAD1D3F0AF100C322B2 /* AppDelegate.m */; };
 		611BCDB11D3F0AF100C322B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BCDB01D3F0AF100C322B2 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		611BCDB91D3F0AF100C322B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 611BCDB71D3F0AF100C322B2 /* LaunchScreen.storyboard */; };
 		611BCDC41D3F0AF100C322B2 /* TemperatureUnitConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BCDC31D3F0AF100C322B2 /* TemperatureUnitConverterTests.m */; };
 		611BCDCF1D3F0AF100C322B2 /* TemperatureUnitConverterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BCDCE1D3F0AF100C322B2 /* TemperatureUnitConverterUITests.m */; };
+		61CF1FAA1D3F69860074F152 /* TemperatureConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CF1FA91D3F69860074F152 /* TemperatureConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		611BCDCA1D3F0AF100C322B2 /* TemperatureUnitConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemperatureUnitConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		611BCDCE1D3F0AF100C322B2 /* TemperatureUnitConverterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureUnitConverterUITests.m; sourceTree = "<group>"; };
 		611BCDD01D3F0AF100C322B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CF1FA81D3F69860074F152 /* TemperatureConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemperatureConverter.h; sourceTree = "<group>"; };
+		61CF1FA91D3F69860074F152 /* TemperatureConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemperatureConverter.m; sourceTree = "<group>"; };
+		BCA069A2B858A26F26D6A381 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D106FC5A764AE35CC123EDFD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F7F9CA4ADBE5811A46A41D2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C8F71AE758077E70951397 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F7FD14343AB9E1D5D7A524F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCA069A2B858A26F26D6A381 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		611BCD9D1D3F0AF100C322B2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,8 @@
 				611BCDC21D3F0AF100C322B2 /* TemperatureUnitConverterTests */,
 				611BCDCD1D3F0AF100C322B2 /* TemperatureUnitConverterUITests */,
 				611BCDA71D3F0AF100C322B2 /* Products */,
+				9A9A0E20FC5F671D10FC3907 /* Pods */,
+				1F7FD14343AB9E1D5D7A524F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +128,8 @@
 				611BCDB71D3F0AF100C322B2 /* LaunchScreen.storyboard */,
 				611BCDBA1D3F0AF100C322B2 /* Info.plist */,
 				611BCDA91D3F0AF100C322B2 /* Supporting Files */,
+				61CF1FA81D3F69860074F152 /* TemperatureConverter.h */,
+				61CF1FA91D3F69860074F152 /* TemperatureConverter.m */,
 			);
 			path = TemperatureUnitConverter;
 			sourceTree = "<group>";
@@ -140,6 +160,15 @@
 			path = TemperatureUnitConverterUITests;
 			sourceTree = "<group>";
 		};
+		9A9A0E20FC5F671D10FC3907 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9CA4ADBE5811A46A41D2C /* Pods.debug.xcconfig */,
+				D106FC5A764AE35CC123EDFD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 611BCDD31D3F0AF100C322B2 /* Build configuration list for PBXNativeTarget "TemperatureUnitConverter" */;
 			buildPhases = (
+				D0E4B6CB868463B0CEA811E2 /* Check Pods Manifest.lock */,
 				611BCDA21D3F0AF100C322B2 /* Sources */,
 				611BCDA31D3F0AF100C322B2 /* Frameworks */,
 				611BCDA41D3F0AF100C322B2 /* Resources */,
+				6F61555EF8BF6A2E301BE672 /* Embed Pods Frameworks */,
+				0887029D1C1BB3B634F0D08B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +297,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0887029D1C1BB3B634F0D08B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F61555EF8BF6A2E301BE672 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0E4B6CB868463B0CEA811E2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		611BCDA21D3F0AF100C322B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +353,7 @@
 				611BCDB11D3F0AF100C322B2 /* ViewController.m in Sources */,
 				611BCDAE1D3F0AF100C322B2 /* AppDelegate.m in Sources */,
 				611BCDAB1D3F0AF100C322B2 /* main.m in Sources */,
+				61CF1FAA1D3F69860074F152 /* TemperatureConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +494,7 @@
 		};
 		611BCDD41D3F0AF100C322B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7F9CA4ADBE5811A46A41D2C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TemperatureUnitConverter/Info.plist;
@@ -424,6 +506,7 @@
 		};
 		611BCDD51D3F0AF100C322B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D106FC5A764AE35CC123EDFD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TemperatureUnitConverter/Info.plist;
@@ -498,6 +581,7 @@
 				611BCDD51D3F0AF100C322B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		611BCDD61D3F0AF100C322B2 /* Build configuration list for PBXNativeTarget "TemperatureUnitConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +590,7 @@
 				611BCDD81D3F0AF100C322B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		611BCDD91D3F0AF100C322B2 /* Build configuration list for PBXNativeTarget "TemperatureUnitConverterUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +599,7 @@
 				611BCDDB1D3F0AF100C322B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
