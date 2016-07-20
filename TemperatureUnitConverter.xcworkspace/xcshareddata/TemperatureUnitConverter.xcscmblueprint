@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C2CA192FCDB1D0DD058C31ECBAAFA5DB038C4727",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "38B836CCF4726079D17218F43C0B21EE56D989CA" : 0,
+    "C2CA192FCDB1D0DD058C31ECBAAFA5DB038C4727" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "25FB10A9-1D70-48D0-B036-22EB6967C9A2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "38B836CCF4726079D17218F43C0B21EE56D989CA" : "",
+    "C2CA192FCDB1D0DD058C31ECBAAFA5DB038C4727" : "TemperatureUnitConverter\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TemperatureUnitConverter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TemperatureUnitConverter.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:asklei\/IOS_APP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38B836CCF4726079D17218F43C0B21EE56D989CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:asklei\/IOS_learning.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C2CA192FCDB1D0DD058C31ECBAAFA5DB038C4727"
+    }
+  ]
+}
