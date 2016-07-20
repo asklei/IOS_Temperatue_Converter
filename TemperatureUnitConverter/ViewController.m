@@ -13,7 +13,8 @@
 @interface ViewController ()
 @property(nonatomic, weak) UILabel *cLabel;
 @property(nonatomic, weak) UILabel *fLabel;
-@property(nonatomic, weak) UISlider *slider;
+@property(nonatomic, weak) UIPickerView *picker;
+@property (strong, nonatomic) NSArray *celsiusNumbers;
 @end
 
 @implementation ViewController
@@ -27,26 +28,30 @@
     
     UILabel *cLabel = [UILabel new];
     UILabel *fLabel = [UILabel new];
-    UISlider *slider = [UISlider new];
+    UIPickerView *picker = [UIPickerView new];
     
     [self.view addSubview:cLabel];
     [self.view addSubview:fLabel];
-    [self.view addSubview:slider];
+    [self.view addSubview:picker];
     
     self.cLabel = cLabel;
     self.fLabel = fLabel;
-    self.slider = slider;
+    self.picker = picker;
+    
+    UIColor *color = [UIColor colorWithHue:0.22 saturation:1.0 brightness:0.9 alpha:1.0];
     
     cLabel.textAlignment = NSTextAlignmentRight;
     fLabel.textAlignment = NSTextAlignmentRight;
+    cLabel.textColor = color;
+    fLabel.textColor = color;
     [cLabel setFont:[UIFont boldSystemFontOfSize:60]];
     [fLabel setFont:[UIFont boldSystemFontOfSize:60]];
-    slider.tintColor = [UIColor colorWithHue:0.22 saturation:1.0 brightness:0.9 alpha:1.0];
-    slider.minimumValue = -100;
-    slider.maximumValue = 100;
-    [self updateBackgrondColor];
+    picker.backgroundColor = [UIColor whiteColor];
     
-    
+    [self celsiusData];
+    [self updateTexts:0.0];
+    self.picker.delegate = self;
+    self.picker.dataSource = self;
     
     [self.cLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(heightOffset);
@@ -60,15 +65,36 @@
         make.trailing.equalTo(self.view.mas_trailing).offset(trailing);
     }];
     
-    [self.slider mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.picker mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).offset(-heightOffset);
         make.leading.equalTo(self.view.mas_leading).offset(leading);
         make.trailing.equalTo(self.view.mas_trailing).offset(trailing);
     }];
     
-    [self.slider addTarget:self action:@selector(updateBackgrondColor) forControlEvents:UIControlEventValueChanged];
+    [self.picker selectRow:100 inComponent:0 animated:true];
     
 
+}
+
+#pragma mark - UIPickerViewDelegate
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    NSNumber *celsiusNumber = [self.celsiusNumbers objectAtIndex:row];
+    float celsiusFloat = [celsiusNumber floatValue];
+    [self updateTexts:celsiusFloat];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSNumber *celsiusNumber = [self.celsiusNumbers objectAtIndex:row];
+    int celsiusInt = [celsiusNumber intValue];
+    return [NSString stringWithFormat:@"%d°C", celsiusInt];
+}
+
+#pragma mark - UIPickerViewDataSource
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return self.celsiusNumbers.count;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,14 +102,17 @@
     // Dispose of any resources that can be recreated.
 }
 
--(float)ceciusToF:(float) c {
-    return 1.8*c + 32;
+- (void) celsiusData {
+    NSMutableArray *mutableCelsiusNumbers = [NSMutableArray new];
+    for (int i=-100; i<=100; i++) {
+        [mutableCelsiusNumbers addObject:@(i)];
+    }
+    self.celsiusNumbers = [mutableCelsiusNumbers copy];
 }
 
-- (void)updateBackgrondColor {
-    self.view.backgroundColor = [UIColor colorWithHue:self.slider.value/100 saturation:0.8 brightness:0.8 alpha:0.5];
-    self.cLabel.text = [NSString stringWithFormat:@"%.2f °C", self.slider.value];
-    self.fLabel.text = [NSString stringWithFormat:@"%.2f °F", [TemperatureConverter celciusToFah:self.slider.value]];
+- (void)updateTexts: (float) f {
+    self.cLabel.text = [NSString stringWithFormat:@"%.2f °C", f];
+    self.fLabel.text = [NSString stringWithFormat:@"%.2f °F", [TemperatureConverter celciusToFah:f]];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
